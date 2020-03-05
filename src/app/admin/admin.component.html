@@ -1,0 +1,10 @@
+
+<div class="container contclass">
+<form class="form-group"> 
+<input placeholder ="UserName" class ="form-control" type ="text" #UserName><br>
+<input placeHolder = "Password" class ="form-control" type="text" #password>
+<button class = "btn btn-secondary btnclass" (click)="loginDetails(UserName.value,password.value)">Login</button>
+</form>
+<span>{{msg}}</span>
+</div>
+

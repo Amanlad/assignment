@@ -1,0 +1,32 @@
+<div>
+     <input class="inputclass" placeholder = "Name" type = "text" [(ngModel)]="newName"> 
+     <input class="inputclass" placeholder = "Age" type = "text" [(ngModel)]="newAge"> 
+    <button class="btn btn-success" (click)="addNewItem()">Add</button>
+    <button class="btn btn-secondary" (click)="updateItem()">Update</button>
+    
+      <body>
+          <table class="table table-bordered tableclass">
+             <thead class ="bg-dark text-white">
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th></th>
+                <th></th>
+              </tr>
+             </thead>
+            
+            
+             <tr *ngFor = "let product of productcontainer; index as i">
+               <td>{{product.name}}</td>
+               <td>{{product.age}}</td>
+              <td> <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button></td>
+              <td><button class="btn btn-secondary" (click)="editItem(i)">Edit</button></td>
+             </tr>
+            
+          </table>
+      </body>
+
+    
+    
+ 
+</div>
